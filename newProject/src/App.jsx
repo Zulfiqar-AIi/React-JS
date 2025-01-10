@@ -7,7 +7,7 @@ function App() {
   
 
   return (
-    <h1>MR. ZULFIQAR ALI </h1>
+    <h1>MR. JADUGHAR </h1>
   )
 }
 
