@@ -5,7 +5,7 @@ import './App.css'
 
 const App = () => {
   // State to keep track of the background color of the page
-  const [bgColor, setBgColor] = useState("white");
+  const [bgColor, setBgColor] = useState("black");
 
   // Array of colors and their names
   const colors = [
