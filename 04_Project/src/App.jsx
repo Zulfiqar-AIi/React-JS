@@ -28,8 +28,9 @@ const App = () => {
     <div
       style={{
         backgroundColor: bgColor,
-        height: "100vh",
+        height: "90vh",
         margin: "0",
+        width: "100vw",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
@@ -39,7 +40,7 @@ const App = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          padding: "10px",
+          padding: "1vh",
         }}
       >
         {colors.map((color) => (
