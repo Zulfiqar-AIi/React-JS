@@ -1,68 +1,43 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
 
-const App = () => {
-  // State to keep track of the background color of the page
-  const [bgColor, setBgColor] = useState("black");
-
-  // Array of colors and their names
-  const colors = [
-    { name: "Red", value: "red" },
-    { name: "Blue", value: "blue" },
-    { name: "Green", value: "green" },
-    { name: "Yellow", value: "yellow" },
-    { name: "Orange", value: "orange" },
-    { name: "Purple", value: "purple" },
-    { name: "Pink", value: "pink" },
-    { name: "Cyan", value: "cyan" },
-  ];
-
-  // Function to handle changing the background color
-  const handleColorChange = (color) => {
-    setBgColor(color);
-  };
+function App() {
+  const [color, setColor] = useState("olive");
 
   return (
-    <div
-      style={{
-        backgroundColor: bgColor,
-        height: "90vh",
-        margin: "0",
-        width: "100vw",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-end",
-      }}
+    <div className="w-full h-screen"
+    style={{backgroundColor: color}}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          padding: "1vh",
-        }}
-      >
-        {colors.map((color) => (
+      <div className="fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2">
+        <div className="flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl">
           <button
-            key={color.value}
-            onClick={() => handleColorChange(color.value)}
-            style={{
-              backgroundColor: color.value,
-              color: "white",
-              border: "none",
-              padding: "10px 20px",
-              margin: "0 5px",
-              borderRadius: "5px",
-              cursor: "pointer",
-            }}
-          >
-            {color.name}
-          </button>
-        ))}
+          onClick={() => setColor("red")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "red"}}
+          >Red</button>
+          <button
+          onClick={() => setColor("green")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "green"}}
+          >Green</button>
+          <button
+          onClick={() => setColor("blue")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "blue"}}
+          >Blue</button>
+          <button
+          onClick={() => setColor("purple")}
+          className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
+          style={{backgroundColor: "purple"}}
+          >Purple</button>
+          <button
+          onClick={() => setColor("yellow")}
+          className="outline-none px-4 py-1 rounded-full text-black shadow-lg"
+          style={{backgroundColor: "yellow"}}
+          >Yellow</button>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default App;
